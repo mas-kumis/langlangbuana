@@ -24,7 +24,7 @@ const Navigation = () => {
             <p className={`${sidebar ? "hidden" : "block"}`}>Favorite</p></div></Link>     
         </div>
         <div className={`${sidebar ? "hidden" : "flex" } transition duration-300 ease-in-out flex-col py-[30px] text-white space-y-[30px]`}>
-          <div className="flex space-x-4 "><RiLoginBoxFill  size={24}/> <p>Login</p></div>
+          <div className="flex space-x-4 hover:text-purple-600"><RiLoginBoxFill  size={24}/> <p>Login</p></div>
           <div className="flex space-x-4 "><FaUserCircle  size={24}/> <p>Register</p></div>
           
           

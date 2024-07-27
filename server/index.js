@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 import cookieParser from 'cookie-parser'
 
 import userRoute from './routes/userRoute.js'
+import productRoute from './routes/productRoute.js'
 
 import connectDB from './config/db.js'
 dotenv.config()
@@ -17,6 +18,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(cookieParser())
 
 app.use('/api/users',userRoute)
+app.use('/api/products', productRoute)
 
 app.get('/', (req,res) => {
     res.send("Hello Developer")
