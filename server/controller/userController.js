@@ -11,9 +11,11 @@ const readUser = asyncHandler(async(req,res) => {
 
 const createUser = asyncHandler(async(req,res) => {
    const {username, email, password} = req.body
+//    If Not All Filled
    if(!username || !email || !password){
     throw new Error("Please add all fields")
    }
+//    If Email Existed
    const userExists = await User.findOne({email})
    if(userExists){
     throw new Error("User already exists")

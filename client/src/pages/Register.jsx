@@ -3,14 +3,14 @@ import { Outlet } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 // import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import Login from '../components/Login'
+import Register from '../components/Register'
 
-const Home = () => {
+const RegisterPage = () => {
   return (
     <div className="flex">
        {/* <ToastContainer/> */}
       <Navigation/>
-      <Login/>
+      <Register/>
       <main className="py-3">
         <Outlet/>
       </main>
@@ -18,4 +18,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default RegisterPage

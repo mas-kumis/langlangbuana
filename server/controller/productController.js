@@ -11,8 +11,8 @@ const createProduct = (async(req,res) =>{
         res.status(400)
         res.json("Please Fill All Completely")
     }
-    const newUser = await Product.create ({title,desc,price})
-    res.json(newUser)
+    const newData = await Product.create ({title,desc,price})
+    res.json(newData)
 
 
 })
