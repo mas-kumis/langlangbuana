@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 const Register = () => {
     return (
       <div className="items-center flex justify-center w-full">
@@ -10,15 +10,15 @@ const Register = () => {
                       <input type="text" label="Login" placeholder="Your username" className="w-[300px] h-[30px]"/>
                       <input type="text" label="Login" placeholder="Your e-mail" className="w-[300px] h-[30px]"/>
                       <input type="text" label="Login" placeholder="Your passwords" className="w-[300px] h-[30px]"/>
-                      <button onClick="" className="py-2 rounded-full bg-green-400 text-white w-[200px]">Submit</button>
+                      <button className="py-2 rounded-full bg-green-400 text-white w-[200px]">Submit</button>
                   </form>
-                  <p className="text-[10px]">Already Have An Account? <span className="text-green-500">Please Login</span></p>
+                  <p className="text-[10px]">Already Have An Account? <span className="text-green-500"><Link to="/">Please Login</Link></span></p>
               </div>
   
           </div>
         </div>
-        <div className="basis-1/2 h-full">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiwcvQsM8-g8UhqIkYhqovspXo29w2py-MZLaIBlHXL9w6X15KhrwmQrEplNiMeVNnrkZsYznXjYFlLXwJ0a-cEI5OQv7_MUv1MF5xc434aM88hZZ-JnU-Id8EGWHOcAXCBAkEZL3VKjCWE-BtfLP7p8UoO50SZ0rOGd2OtV1gz2hDOfxd3UP6AG3TViQ/s1600/4k-pc-wallpaper-ai-art.webp" className="object-fill"alt="" />
+        <div className="basis-1/2 h-full flex items-center justify-center">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/034/217/966/small_2x/one-piece-luffy-with-rainbow-color-ai-generative-png.png" className=""alt="" />
         
         </div>
       </div>

@@ -23,10 +23,11 @@ const Navigation = () => {
             <Link to="/favorite"><div className="flex space-x-4 hover:text-red-500"><FaHeartbeat size={24} className=""/>
             <p className={`${sidebar ? "hidden" : "block"}`}>Favorite</p></div></Link>     
         </div>
-        <div className={`${sidebar ? "hidden" : "flex" } transition duration-300 ease-in-out flex-col py-[30px] text-white space-y-[30px]`}>
-          <Link to="/"><div className="flex space-x-4 hover:text-purple-600"><RiLoginBoxFill  size={24}/> <p>Login</p></div></Link>
-          <Link to="/register"><div className="flex space-x-4 hover:text-cyan-600 "><FaUserCircle  size={24}/> <p>Register</p></div></Link>
-          
+        <div className="flex transition duration-300 ease-in-out flex-col py-[30px] text-white space-y-[30px] items-start justify-start">
+        <Link to="/"><div className="flex space-x-4 hover:text-yellow-500  "><RiLoginBoxFill size={24} alt="Login" className=""/>
+        <p className={`${sidebar ? "hidden" : "block"}`}>Login</p></div></Link> 
+        <Link to="/register"><div className="flex space-x-4 hover:text-blue-500"><FaUserCircle size={24}  alt="Register" className=""/>
+        <p className={`${sidebar ? "hidden" : "block"}`}>Register</p></div></Link> 
           
             
         </div>
