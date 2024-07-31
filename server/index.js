@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import path from 'path'
 import cookieParser from 'cookie-parser'
+import cors from 'cors'
 
 import connectDB from './config/connectDB.js'
 import userRoute from './router/userRoute.js'
@@ -13,6 +14,7 @@ connectDB()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
+app.use(cors())
 app.use('/api/users', userRoute)
 app.use(notFound)
 app.use(errorHandler)

@@ -52,6 +52,9 @@ const loginUser = asyncHandler(async (req, res) => {
             res.status(400)
             throw new Error('Invalid credentials')
         }
+    } else {
+        res.status(404)
+        throw new Error('User not found')
     }
 
 })

@@ -5,8 +5,8 @@ import { authenticate, authorizedAdmin } from '../middleware/authMiddleware.js'
 const router = express.Router()
 
 router.route('/')
-    .post (createUser)
     .get(authenticate, authorizedAdmin, getAllUsers)
+router.post('/register', createUser)
 router.post('/auth', loginUser)
 router.post('/logout', logoutUser)
 
