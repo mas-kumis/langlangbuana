@@ -3,6 +3,7 @@
 import Navbar from '../components/Navbar'
 import {  useSelector } from "react-redux"
 import ProfileUpdate from '../components/ProfileUpdate'
+import UserList from '../components/UserList'
 
 const Dashboard = () => {
   const {userInfo} = useSelector((state) => state.auth)
@@ -10,8 +11,13 @@ const Dashboard = () => {
     <div className="flex">
         <Navbar/>
         <div className="">      
-          {userInfo && userInfo.isAdmin && ( <p>Admin</p> )}
+          
+          {userInfo && ( <p>{userInfo.username}</p> )}
           <ProfileUpdate/>
+        </div>
+        <div className="mx-4">
+        {userInfo && userInfo.isAdmin && ( <UserList/> )}
+          
         </div>
         
       

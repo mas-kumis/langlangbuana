@@ -23,7 +23,7 @@ const Navbar = () => {
   }
   return (
     <nav >
-        <div className={` ${open ? "w-[60px]" : "w-[200px]"} bg-slate-800 h-screen  flex flex-col justify-between items-start py-8 w-[60px] px-4`}>
+        <div className={` ${open ? "w-[60px]" : "w-[200px]" } bg-slate-800 h-screen  flex flex-col justify-between items-start py-8  px-4`} >
         <div className="flex flex-col space-y-4 items-start">
         <button className="my-4 "onClick={() => setOpen(!open)} >
             <div className="flex space-x-4">

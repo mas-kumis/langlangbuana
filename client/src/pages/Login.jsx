@@ -23,6 +23,8 @@ const Login = () => {
     }
   }, [ navigate, userInfo])
 
+
+
   const loginHandler = async (e) => {
     e.preventDefault();
     if (!email || !password) {
@@ -35,8 +37,8 @@ const Login = () => {
       toast.success('Login Successful')
       navigate('/')
     } catch (err) {
-      console.log(err)
       toast.error(err?.data?.message || err.error)
+      console.log(err)
     }
   }
   return (

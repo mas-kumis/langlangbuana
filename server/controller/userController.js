@@ -21,7 +21,9 @@ const createUser = asyncHandler(async (req, res) => {
     try {
         const savedUser = await newUser.save()
         const token = generateToken(res, savedUser._id)
+        generateToken(res, savedUser._id)
         res.status(200).json({
+
             _id: savedUser._id,
             username: savedUser.username,
             email: savedUser.email,
@@ -39,7 +41,8 @@ const loginUser = asyncHandler(async (req, res) => {
     if (existingUser) {
         const isPasswordCorrect = await bcrypt.compare(password, existingUser.password)
         if (isPasswordCorrect) {
-            generateToken(res, existingUser._id)
+              generateToken(res, existingUser._id)
+              res.cookie('jwt', generateToken(res, existingUser._id), { httpOnly: true })
             res.status(200).json({
                 message : 'Login success',
                 _id: existingUser._id,
