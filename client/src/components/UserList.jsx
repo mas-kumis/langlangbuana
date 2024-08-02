@@ -39,11 +39,13 @@ const UserList = () => {
     const handleUpdate = async(id) =>{
         try{
             await updateUser({
-                userId : id,
+                userId :  id,
                 username : editableUserusername,
                 email : editableUseremail
             })
             setEditableUserId(null)
+            
+            toast.success("Updated")
             refetch()
 
         }catch(error){
