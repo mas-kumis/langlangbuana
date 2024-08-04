@@ -11,7 +11,9 @@ const Home = () => {
         {userInfo ?
         <div>
          <p>You are Login </p> 
-        <Link to="/dashboard"> <button className="`bg-blue-500 text-white rounded-lg px-4 py-2">Dashboard</button></Link>
+        <Link to="/dashboard"> <button className="bg-blue-500 text-white rounded-lg px-4 py-2">Dashboard</button></Link>
+        { userInfo && userInfo.isAdmin && <Link to="/category"> <button className="bg-blue-500 text-white rounded-lg px-4 py-2">Category</button></Link>}
+        
          </div> : 
           <div className="flex">
               <Link to="/login"><button className="bg-blue-500 text-white rounded-lg px-4 py-2">Login</button></Link>
