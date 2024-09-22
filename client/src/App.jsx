@@ -1,25 +1,44 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import './App.css'
-import Home from './pages/Home'
-import Login from './pages/Login'
-import Register from './pages/Register'
-import Dashboard from './pages/Dashboard'
-import PrivateRoute from './pages/PrivateRoute'
-import AdminRoute from './pages/AdminRoute'
-import CategoryPage from './pages/Category'
+import "./App.css";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import CreateBlog from "./pages/CreateBlog";
+import BlogDetail from "./pages/BlogDetail";
+import UpdateBlog from "./pages/UpdateBlog";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import ProfilePage from "./pages/ProfilePage";
+import RequireAuth from "./pages/RequireAuth";
+// import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-   <BrowserRouter>
-    <Routes>
-       <Route path='/' element={<Home/>}/>
-       <Route path='/login' element={<Login/>}/>
-       <Route path='/register' element={<Register/>}/>
-        <Route path='/dashboard' element={ <PrivateRoute><Dashboard/> </PrivateRoute>}/>
-        <Route path='/category' element={ <AdminRoute><CategoryPage/> </AdminRoute>}/>
-    </Routes>
-   </BrowserRouter>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/blog" element={<BlogDetail />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route
+          path="/"
+          element={
+            <RequireAuth>
+              <Outlet />
+            </RequireAuth>
+          }
+        >
+          <Route path="/dashboard" element={<CreateBlog />} />
+          {/* <Route path="/dashboard/create" element={<CreateBlog />} /> */}
+          <Route path="/update/:id" element={<UpdateBlog />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

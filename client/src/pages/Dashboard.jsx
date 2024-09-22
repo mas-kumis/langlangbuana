@@ -1,28 +1,11 @@
-
-
-import Navbar from '../components/Navbar'
-import {  useSelector } from "react-redux"
-import ProfileUpdate from '../components/ProfileUpdate'
-import UserList from '../components/UserList'
+import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
-  const {userInfo} = useSelector((state) => state.auth)
   return (
-    <div className="flex">
-        <Navbar/>
-        <div className="">      
-          
-          {userInfo && ( <p>{userInfo.username}</p> )}
-          <ProfileUpdate/>
-        </div>
-        <div className="mx-4">
-        {userInfo && userInfo.isAdmin && ( <UserList/> )}
-          
-        </div>
-        
-      
+    <div>
+      <Sidebar />
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
