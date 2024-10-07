@@ -33,7 +33,6 @@ const Navbar = () => {
           <li>Paket Wisata Jogja</li>
           <li>Paket Wisata Nasional</li>
           <li>Sewa Unit</li>
-          <li>Blog</li>
         </ul>
       </div>
     </div>
