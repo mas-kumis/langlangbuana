@@ -7,6 +7,7 @@ const HeadersLayout = () => {
     <div className="bg-red-800">
       <Navbar />
       <Jumbotron />
+      WIldan
     </div>
   );
 };
