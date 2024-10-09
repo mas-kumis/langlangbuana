@@ -2,7 +2,31 @@
 import React from "react";
 
 const Jumbotron = () => {
-  return <div className="h-[2000px]"></div>;
+  return (
+    <div className="">
+      <div className="h-screen flex items-center justify-center lg:px-[150px] flex-col px-[20px] md:px-[80px]  text-center">
+        <h1 className="text-3xl md:text-5xl uppercase font-bold italic lg:text-6xl text-white">
+          Jelajahi Pesona Jogja
+          <br />
+          <span className="text-2xl font-medium textt-white">
+            Paket Wisata Seru, Semua Dalam Satu Klik!
+          </span>
+        </h1>
+        <p className="font-bold text-white">
+          Dapatkan informasi potongan harga luar biasa serta informasi seputar
+          dunia wisata secara gratis
+        </p>
+        <div className="bg-white rounded-xl w-[400px] flex items-center justify-between my-4">
+          <input className=" px-4 py-2 border-2 rounded-l-xl w-full" />
+          <button className="bg-yellow-400 w-[100px] px-4 py-2 rounded-r-xl   focus:outline-none font-bold">
+            {" "}
+            Cari
+          </button>
+        </div>
+      </div>
+      <h3>Try</h3>
+    </div>
+  );
 };
 
 export default Jumbotron;
