@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { FiMenu } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
+import { motion } from "framer-motion";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
@@ -37,7 +38,7 @@ const Navbar = () => {
             <Link href="/">Home</Link>
           </li>
           <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-            <Link href="/">Paket Wisata Jogja</Link>
+            <Link href="/paket-wisata-jogja">Paket Wisata Jogja</Link>
           </li>
           <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
             <Link href="/">Paket Wisata Nasional</Link>
@@ -49,7 +50,7 @@ const Navbar = () => {
             <Link href="/">Blog</Link>
           </li>
           <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-            <Link href="/">Profile</Link>
+            <Link href="/profile">Profile</Link>
           </li>
         </ul>
         <div className="xl:hidden">
@@ -69,7 +70,7 @@ const Navbar = () => {
           <Link href="/">Home</Link>
         </li>
         <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-          <Link href="/">Paket Wisata Jogja</Link>
+          <Link href="/paket-wisata-jogja">Paket Wisata Jogja</Link>
         </li>
         <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
           <Link href="/">Paket Wisata Nasional</Link>
@@ -81,7 +82,7 @@ const Navbar = () => {
           <Link href="/">Blog</Link>
         </li>
         <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-          <Link href="/">Profile</Link>
+          <Link href="/profile">Profile</Link>
         </li>
       </ul>
     </nav>

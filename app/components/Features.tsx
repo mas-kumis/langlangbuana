@@ -44,7 +44,7 @@ const Features = () => {
             stres yang mengganggu antusiasme mereka untuk berlibur.
           </p>
         </div>
-        <div className="  grid xl:grid-cols-2 gap-4">
+        <div className="  grid grid-cols-2 gap-4">
           {data.map((_, i) => (
             <div key={i} className=" py-8 flex flex-col rounded-xl">
               <div className="mx-4 text-4xl font-black italic text-yellow-400">
