@@ -30,23 +30,29 @@ const Navbar = () => {
         scroll ? " top-0 w-full rounded-none  " : " top-5 rounded-xl"
       }`}
     >
-      <div className="flex justify-between items-center p-8">
+      <div className="flex justify-between items-center py-4 px-8">
         <div className="uppercase font-bold italic text-2xl">LalangBuana</div>
-        <ul className="md:flex gap-6 hidden">
-          <li>
+        <ul className="xl:flex gap-4 hidden">
+          <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
             <Link href="/">Home</Link>
           </li>
-          <li>
+          <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+            <Link href="/">Paket Wisata Jogja</Link>
+          </li>
+          <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+            <Link href="/">Paket Wisata Nasional</Link>
+          </li>
+          <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
             <Link href="/">Sewa Unit</Link>
           </li>
-          <li>
+          <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
             <Link href="/">Blog</Link>
           </li>
-          <li>
-            <Link href="/">Tentang Kami</Link>
+          <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+            <Link href="/">Profile</Link>
           </li>
         </ul>
-        <div className="md:hidden">
+        <div className="xl:hidden">
           {open ? (
             <GrClose onClick={handleOpen} />
           ) : (
@@ -59,10 +65,24 @@ const Navbar = () => {
           open ? "block" : "hidden"
         }  p-3 space-y-2 text-center w-full `}
       >
-        <li> Home</li>
-        <li>Sewa Unit</li>
-        <li>Blog</li>
-        <li>Tentang Kami</li>
+        <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+          <Link href="/">Home</Link>
+        </li>
+        <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+          <Link href="/">Paket Wisata Jogja</Link>
+        </li>
+        <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+          <Link href="/">Paket Wisata Nasional</Link>
+        </li>
+        <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+          <Link href="/">Sewa Unit</Link>
+        </li>
+        <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+          <Link href="/">Blog</Link>
+        </li>
+        <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
+          <Link href="/">Profile</Link>
+        </li>
       </ul>
     </nav>
   );

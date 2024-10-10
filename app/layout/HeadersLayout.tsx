@@ -3,10 +3,9 @@ import Navbar from "../components/Navbar";
 import Jumbotron from "../components/Jumbotron";
 const HeadersLayout = () => {
   return (
-    <div className="bg-red-800 bg-[url('/header.jpg')] bg-cover">
+    <div className="bg-[url('/header.png')] bg-cover">
       <Navbar />
       <Jumbotron />
-      WIldan
     </div>
   );
 };
