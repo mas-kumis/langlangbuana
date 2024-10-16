@@ -30,7 +30,7 @@ const Solution = () => {
             untuk membantu merencanakan perjalanan yang menyenangkan dan tak
             terlupakan dengan mudah
           </li>
-          <li>Nikmati Potongan Harga Yang Kami Tawarkan</li>
+          <li>Nikmati pelayanan kami</li>
         </ul>
       </div>
     </div>
