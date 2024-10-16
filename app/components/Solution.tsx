@@ -1,9 +1,18 @@
 import React from "react";
+import Image from "next/image";
 
 const Solution = () => {
   return (
     <div className="w-full grid gap-8 lg:grid-cols-2 bg-blue-950 px-[30px] md:px-[50px] lg:px-[100px] py-[50px]">
-      <div className="w-full h-full  bg-white">1</div>
+      <div className="w-full h-full rounded-xl">
+        <Image
+          src="/weare.jpeg"
+          alt="image"
+          width={500}
+          height={500}
+          className="w-full h-full object-cover rounded-xl shadow-xl  border-white border-8"
+        />
+      </div>
       <div className="text-white">
         <h5 className="font-bold text-3xl">
           Langlangbuana menjawab semua kegundahan Anda..
@@ -30,7 +39,7 @@ const Solution = () => {
             untuk membantu merencanakan perjalanan yang menyenangkan dan tak
             terlupakan dengan mudah
           </li>
-          <li>Nikmati pelayanan kami</li>
+          <li>Nikmati Potongan Harga Yang Kami Tawarkan</li>
         </ul>
       </div>
     </div>
