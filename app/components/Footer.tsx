@@ -6,8 +6,8 @@ import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className="w-full py-[20px] px-[100px] bg-white  border-t-4">
-      <div className="grid grid-cols-4 gap-8">
+    <div className="w-full py-[20px]  px-[30px] md:px-[50px] xl:px-[100px] bg-white  border-t-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
         <div className="flex flex-col space-y-2">
           <h4 className="text-blue-950 text-2xl font-bold">LangLangBuana</h4>
           <p className="text-sm text-justify">
