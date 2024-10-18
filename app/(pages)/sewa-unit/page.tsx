@@ -1,8 +1,9 @@
 import HeadersLayout from "@/app/layout/HeadersLayout";
 import React from "react";
 import Footer from "@/app/components/Footer";
-import Product from "@/app/components/paketwisatajogja/Product";
-import AboutProduct from "@/app/components/paketwisatajogja/AboutProduct";
+import AboutProduct from "@/app/components/sewaunit/AboutProduct";
+import Product from "@/app/components/sewaunit/Product";
+
 const page = () => {
   return (
     <div>

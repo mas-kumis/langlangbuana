@@ -49,8 +49,9 @@ const Product = () => {
     <div className="my-[50px]">
       <div className="bg-blue-950  py-[50px] px-[30px] md:px-[50px] lg:px-[100px]">
         <h4 className="font-bold text-white text-3xl md:text-4xl lg:text-5xl text-center">
-          Temukan Pesona Jogja: <br />
-          Surga Budaya dan Alam di Jantung Indonesia!{" "}
+          Sewa Mobil Mudah dan Nyaman
+          <br />
+          Perjalanan Anda Dimulai di Sini!{" "}
         </h4>
       </div>
       <div className=" mx-[30px] md:mx-[50px] lg:mx-[100px]">

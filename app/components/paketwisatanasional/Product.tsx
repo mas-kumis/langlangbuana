@@ -49,7 +49,7 @@ const Product = () => {
     <div className="my-[50px]">
       <div className="bg-blue-950  py-[50px] px-[30px] md:px-[50px] lg:px-[100px]">
         <h4 className="font-bold text-white text-3xl md:text-4xl lg:text-5xl text-center">
-          Temukan Pesona Jogja: <br />
+          Temukan Pesona Nasional: <br />
           Surga Budaya dan Alam di Jantung Indonesia!{" "}
         </h4>
       </div>
@@ -72,7 +72,7 @@ const Product = () => {
               <div className="flex flex-col justify-between h-full my-4 mx-4  text-left">
                 <h5 className="font-bold text-xl">{_?.title}</h5>
 
-                <div className="flex flex-col space-y-">
+                <div className="flex flex-col space-y-1">
                   <div className="flex justify-between items-center">
                     <p className="font-bold">{_?.price}</p>
                   </div>

@@ -41,13 +41,13 @@ const Navbar = () => {
             <Link href="/paket-wisata-jogja">Paket Wisata Jogja</Link>
           </li>
           <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-            <Link href="/">Paket Wisata Nasional</Link>
+            <Link href="/paket-wisata-nasional">Paket Wisata Nasional</Link>
           </li>
           <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-            <Link href="/">Sewa Unit</Link>
+            <Link href="/sewa-unit">Sewa Unit</Link>
           </li>
           <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-            <Link href="/">Blog</Link>
+            <Link href="/blog">Blog</Link>
           </li>
           <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
             <Link href="/profile">Profile</Link>
@@ -73,13 +73,13 @@ const Navbar = () => {
           <Link href="/paket-wisata-jogja">Paket Wisata Jogja</Link>
         </li>
         <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-          <Link href="/">Paket Wisata Nasional</Link>
+          <Link href="/paket-wisata-nasional">Paket Wisata Nasional</Link>
         </li>
         <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-          <Link href="/">Sewa Unit</Link>
+          <Link href="/sewa-unit">Sewa Unit</Link>
         </li>
         <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
-          <Link href="/">Blog</Link>
+          <Link href="/blog">Blog</Link>
         </li>
         <li className="py-2 px-4 hover:bg-yellow-400 font-bold rounded-xl">
           <Link href="/profile">Profile</Link>
