@@ -7,7 +7,7 @@ import Product from "@/app/components/sewaunit/Product";
 const page = () => {
   return (
     <div>
-      <HeadersLayout />
+      <HeadersLayout title="Sewa Unit" desc="LalangBuana Travel" />
       <AboutProduct />
       <Product />
       <Footer />

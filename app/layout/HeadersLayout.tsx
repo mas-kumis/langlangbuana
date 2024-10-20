@@ -1,11 +1,16 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Jumbotron from "../components/Jumbotron";
-const HeadersLayout = () => {
+
+type JumboProps = {
+  title: string;
+  desc: string;
+};
+const HeadersLayout = (props: JumboProps) => {
   return (
     <div className="bg-[url('/header.png')] bg-cover">
       <Navbar />
-      <Jumbotron />
+      <Jumbotron title={props.title} desc={props.desc} />
     </div>
   );
 };

@@ -1,5 +1,15 @@
 import React from "react";
 import Image from "next/image";
+interface DataItem {
+  title: string;
+  price: string;
+}
+
+type Props = {
+  title: string;
+  desc: string;
+  data: DataItem[];
+};
 
 const data = [
   {
@@ -44,17 +54,18 @@ const data = [
   },
 ];
 
-const HomeJogja = () => {
+const HomeJogja = (props: Props) => {
   return (
     <div className="my-[50px]">
       <div className="bg-blue-950  py-[50px] px-[30px] md:px-[50px] lg:px-[100px]">
         <h4 className="font-bold text-white text-3xl md:text-4xl lg:text-5xl text-center">
-          Temukan Pesona Jogja: <br/>Surga Budaya dan Alam di Jantung Indonesia!{" "}
+          {props.title} <br />
+          {props.desc}{" "}
         </h4>
       </div>
       <div className=" mx-[30px] md:mx-[50px] lg:mx-[100px]">
         <div className="my-[20px] md:my-[50px]  grid md:grid-cols-2 xl:grid-cols-4 gap-4">
-          {data.map((_, i) => (
+          {data.map((item, i) => (
             <div
               key={i}
               className="w-full h-[400px] shadow-2xl flex flex-col rounded-xl"
@@ -69,13 +80,13 @@ const HomeJogja = () => {
                 />
               </div>
               <div className="flex flex-col justify-between h-full my-4 mx-4  text-left">
-                <h5 className="font-bold text-xl">{_?.title}</h5>
+                <h5 className="font-bold text-xl">{item?.title}</h5>
                 <div>
                   <p className="line-through text-xs">
                     Paket Rp. 600.000 / Mobil
                   </p>
                   <div className="flex justify-between items-center">
-                    <p className="font-bold">{_?.price}</p>
+                    <p className="font-bold">{item?.price}</p>
                     <p className="bg-yellow-400 px-2 py-1 rounded-md font-bold">
                       LIMITED
                     </p>

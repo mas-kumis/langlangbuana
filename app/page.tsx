@@ -10,12 +10,19 @@ import HomeOut from "./components/HomeOut";
 export default function Home() {
   return (
     <div className="">
-      <HeadersLayout />
+      <HeadersLayout
+        title="Jelajahi Pesona Jogja"
+        desc="Paket wisata seru, semua dalam satu klik!"
+      />
       <Features />
       <Solution />
       <Service />
       <Promo />
-      <HomeJogja />
+      <HomeJogja
+        title="Temukan Pesona Jogja"
+        desc="Surga Budaya dan Alam di Jantung Indonesia!"
+        data=""
+      />
       <HomeOut />
       <Footer />
     </div>

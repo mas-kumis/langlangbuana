@@ -6,7 +6,7 @@ import AboutProduct from "@/app/components/paketwisatanasional/AboutProduct";
 const page = () => {
   return (
     <div>
-      <HeadersLayout />
+      <HeadersLayout title="Paket Wisata Nasional" desc="LalangBuana Travel" />
       <AboutProduct />
       <Product />
       <Footer />

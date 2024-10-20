@@ -6,7 +6,10 @@ import AboutProduct from "@/app/components/paketwisatajogja/AboutProduct";
 const page = () => {
   return (
     <div>
-      <HeadersLayout />
+      <HeadersLayout
+        title="Temukan Pesona Jogja"
+        desc="Kota Budaya dengan Ratusan Wisata Alam yang Menyenangkan"
+      />
       <AboutProduct />
       <Product />
       <Footer />
