@@ -1,12 +1,77 @@
 import HeadersLayout from "@/app/layout/HeadersLayout";
-import Promo from "./components/Promo";
 import Features from "./components/Features";
 import Solution from "./components/Solution";
-// import Gallery from "@/app/layout/Gallery";
 import Footer from "./components/Footer";
 import Service from "./components/Service";
-import HomeJogja from "./components/HomeJogja";
-import HomeOut from "./components/HomeOut";
+import HomeProduct from "./layout/HomeProduct";
+import AllProduct from "./layout/AllProduct";
+import Card from "./components/Card";
+
+const data = [
+  {
+    id: 1,
+    title: "Lava tour merapi, Suraloka Zoo, Kaliurang Park, Obelix Village",
+    price: " Rp. 400.000 / Mobil",
+  },
+  {
+    id: 2,
+    title: "Gembira Loka Zoo, Kids Fun, Heha Sky View, Tebing Breksi",
+    price: " Rp. 500.000 / Mobil",
+  },
+  {
+    id: 3,
+    title: "VW Borobudur, Lava Tour Merapi, Kaliurang Park, Suraloka Zoo",
+    price: " Rp. 380.000 / Mobil",
+  },
+  {
+    id: 4,
+    title: "Tlogo Putri Kaliurang, ATV Oxygen, Ledok Sambi, Obelix Village",
+    price: " Rp. 270.000 / Mobil",
+  },
+  {
+    id: 5,
+    title: "Lava tour merapi, Suraloka Zoo, Kaliurang Park, Obelix Village",
+    price: " Rp. 400.000 / Mobil",
+  },
+  {
+    id: 6,
+    title: "Gembira Loka Zoo, Kids Fun, Heha Sky View, Tebing Breksi",
+    price: " Rp. 500.000 / Mobil",
+  },
+  {
+    id: 7,
+    title: "VW Borobudur, Lava Tour Merapi, Kaliurang Park, Suraloka Zoo",
+    price: " Rp. 380.000 / Mobil",
+  },
+  {
+    id: 8,
+    title: "Tlogo Putri Kaliurang, ATV Oxygen, Ledok Sambi, Obelix Village",
+    price: " Rp. 270.000 / Mobil",
+  },
+];
+
+const promo = [
+  {
+    id: 1,
+    title: "Lava tour merapi, Suraloka Zoo, Kaliurang Park, Obelix Village",
+    price: " Rp. 400.000 / Mobil",
+  },
+  {
+    id: 2,
+    title: "Gembira Loka Zoo, Kids Fun, Heha Sky View, Tebing Breksi",
+    price: " Rp. 500.000 / Mobil",
+  },
+  {
+    id: 3,
+    title: "VW Borobudur, Lava Tour Merapi, Kaliurang Park, Suraloka Zoo",
+    price: " Rp. 380.000 / Mobil",
+  },
+  {
+    id: 4,
+    title: "Tlogo Putri Kaliurang, ATV Oxygen, Ledok Sambi, Obelix Village",
+    price: " Rp. 270.000 / Mobil",
+  },
+];
 export default function Home() {
   return (
     <div className="">
@@ -17,13 +82,30 @@ export default function Home() {
       <Features />
       <Solution />
       <Service />
-      <Promo />
-      <HomeJogja
-        title="Temukan Pesona Jogja"
-        desc="Surga Budaya dan Alam di Jantung Indonesia!"
-        data=""
-      />
-      <HomeOut />
+      <AllProduct
+        title="Liburan Tak Pernah Semurah Ini"
+        desc="Dapatkan Diskon Open Trip Sekarang!"
+      >
+        {promo.map((item, i) => (
+          <Card key={i} title={item.title} price={item.price} index={i} />
+        ))}
+      </AllProduct>
+      <HomeProduct
+        title="Jelajahi Pesona Jogja"
+        desc="Liburan ke Jogja bersama LalangBuana"
+      >
+        {data.map((item, i) => (
+          <Card key={i} title={item.title} price={item.price} index={i} />
+        ))}
+      </HomeProduct>
+      <HomeProduct
+        title="Dari Jogja/Magelang ke Seluruh Dunia"
+        desc="Temukan Keajaiban bersama LalangBuana"
+      >
+        {data.map((item, i) => (
+          <Card key={i} title={item.title} price={item.price} index={i} />
+        ))}
+      </HomeProduct>
       <Footer />
     </div>
   );
