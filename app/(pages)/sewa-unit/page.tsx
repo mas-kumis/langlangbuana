@@ -4,6 +4,7 @@ import Footer from "@/app/components/Footer";
 import AboutProduct from "@/app/components/AboutProduct";
 import AllProduct from "@/app/layout/AllProduct";
 import Card from "@/app/components/Card";
+
 const About = [
   "Paket wisata sudah termasuk: mobil, driver, BBM dan bersifat Private trip/familly trip.",
   "Free penjemputan/pengantaran Terminal, Stasiun KA & Hotel area Yogyakarta.",
@@ -15,6 +16,49 @@ const About = [
   "Untuk peak season akan dikenakan charge sebesar 30% dari harga normal (libur natal, tahun baru, lebaran).",
   "Untuk booking silahkan klik tombol book now diatas",
   "Kami memerlukan DP 30% dari total harga untuk menjamin pemesanan setelah proses booking.",
+];
+
+const data = [
+  {
+    id: 1,
+    title: "Lava tour merapi, Suraloka Zoo, Kaliurang Park, Obelix Village",
+    price: " Rp. 400.000 / Mobil",
+  },
+  {
+    id: 2,
+    title: "Gembira Loka Zoo, Kids Fun, Heha Sky View, Tebing Breksi",
+    price: " Rp. 500.000 / Mobil",
+  },
+  {
+    id: 3,
+    title: "VW Borobudur, Lava Tour Merapi, Kaliurang Park, Suraloka Zoo",
+    price: " Rp. 380.000 / Mobil",
+  },
+  {
+    id: 4,
+    title: "Tlogo Putri Kaliurang, ATV Oxygen, Ledok Sambi, Obelix Village",
+    price: " Rp. 270.000 / Mobil",
+  },
+  {
+    id: 5,
+    title: "Lava tour merapi, Suraloka Zoo, Kaliurang Park, Obelix Village",
+    price: " Rp. 400.000 / Mobil",
+  },
+  {
+    id: 6,
+    title: "Gembira Loka Zoo, Kids Fun, Heha Sky View, Tebing Breksi",
+    price: " Rp. 500.000 / Mobil",
+  },
+  {
+    id: 7,
+    title: "VW Borobudur, Lava Tour Merapi, Kaliurang Park, Suraloka Zoo",
+    price: " Rp. 380.000 / Mobil",
+  },
+  {
+    id: 8,
+    title: "Tlogo Putri Kaliurang, ATV Oxygen, Ledok Sambi, Obelix Village",
+    price: " Rp. 270.000 / Mobil",
+  },
 ];
 const page = () => {
   return (
