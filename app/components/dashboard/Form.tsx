@@ -1,10 +1,15 @@
 import React from "react";
 
-const Promo = () => {
+type ListProps = {
+  title: string;
+};
+const ListForm = (props: ListProps) => {
   return (
     <div className="">
       <div>
-        <h4 className="text-3xl font-bold text-blue-950 italic">Promo</h4>
+        <h4 className="text-3xl font-bold text-blue-950 italic">
+          {props.title}
+        </h4>
         <form className="flex-col flex space-y-4 w-[400px] my-4">
           <textarea
             className="w-[400px] py-2 px-2 rounded-md border  border-gray-400 resize-y "
@@ -31,4 +36,4 @@ const Promo = () => {
   );
 };
 
-export default Promo;
+export default ListForm;
