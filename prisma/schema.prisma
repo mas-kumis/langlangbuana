@@ -8,8 +8,8 @@ datasource db {
 }
 
 model Promo {
-  id    String  @id @default(uuid()) @map("_id")
-  title String
-  price String?
-  desc  String
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  price       String
+  description String
 }
