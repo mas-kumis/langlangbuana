@@ -11,5 +11,14 @@ model Promo {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   title       String
   price       String
+  image       String
   description String
+}
+
+model Jogja {
+  id          String @id @default(auto()) @map("_id") @db.ObjectId
+  title       String
+  price       String
+  description String
+  image       String
 }

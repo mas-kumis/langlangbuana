@@ -26,7 +26,7 @@ const Card = (props: CardProps) => {
         <div>
           <p className="line-through text-xs">Paket Rp. 600.000 / Mobil</p>
           <div className="flex justify-between items-center">
-            <p className="font-bold">{props.price}</p>
+            <p className="font-bold">Rp {props.price}</p>
             <p className="bg-yellow-400 px-2 py-1 rounded-md font-bold">
               LIMITED
             </p>

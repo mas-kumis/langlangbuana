@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { deletePromo, getPromoById } from "@/prisma/promo";
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 
 export async function DELETE(
   req: NextRequest,
@@ -11,7 +12,11 @@ export async function DELETE(
   }
 
   try {
-    const promo = await deletePromo(id);
+    const promo = await prisma.jogja.delete({
+      where: {
+        id: id,
+      },
+    });
     if (!promo) {
       return NextResponse.json({ message: "Promo not found" }, { status: 404 });
     }
@@ -35,7 +40,7 @@ export async function GET(
   }
 
   try {
-    const promo = await getPromoById(id);
+    const promo = await prisma.jogja.findUnique({ where: { id: id } });
     if (!promo) {
       return NextResponse.json({ message: "Promo not found" }, { status: 404 });
     }

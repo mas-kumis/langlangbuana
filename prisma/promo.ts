@@ -4,13 +4,15 @@ const prisma = new PrismaClient();
 export const createPromo = async (
   title: string,
   price: string,
-  description: string
+  description: string,
+  image: string
 ) => {
   const promo = await prisma.promo.create({
     data: {
       title,
       price,
       description,
+      image,
     },
   });
   return promo;
@@ -18,6 +20,15 @@ export const createPromo = async (
 
 export const getAllPromo = async () => {
   const promo = await prisma.promo.findMany();
+  return promo;
+};
+
+export const getPromoById = async (id: string) => {
+  const promo = await prisma.promo.findUnique({
+    where: {
+      id: id,
+    },
+  });
   return promo;
 };
 

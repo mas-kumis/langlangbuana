@@ -50,29 +50,27 @@ const data = [
   },
 ];
 
-const promo = [
-  {
-    id: 1,
-    title: "Lava tour merapi, Suraloka Zoo, Kaliurang Park, Obelix Village",
-    price: " Rp. 400.000 / Mobil",
-  },
-  {
-    id: 2,
-    title: "Gembira Loka Zoo, Kids Fun, Heha Sky View, Tebing Breksi",
-    price: " Rp. 500.000 / Mobil",
-  },
-  {
-    id: 3,
-    title: "VW Borobudur, Lava Tour Merapi, Kaliurang Park, Suraloka Zoo",
-    price: " Rp. 380.000 / Mobil",
-  },
-  {
-    id: 4,
-    title: "Tlogo Putri Kaliurang, ATV Oxygen, Ledok Sambi, Obelix Village",
-    price: " Rp. 270.000 / Mobil",
-  },
-];
-export default function Home() {
+interface Promo {
+  title: string;
+  price: string;
+}
+
+async function getPromo() {
+  const res = await fetch("http://localhost:3000/api/promo", {
+    cache: "no-store",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  const data = await res.json();
+  return data;
+}
+
+export default async function Home() {
+  const promo: Promo[] = await getPromo().catch((error) => {
+    console.error(error);
+    return []; // Return an empty array on error
+  });
   return (
     <div className="">
       <HeadersLayout
@@ -86,9 +84,13 @@ export default function Home() {
         title="Liburan Tak Pernah Semurah Ini"
         desc="Dapatkan Diskon Open Trip Sekarang!"
       >
-        {promo.map((item, i) => (
-          <Card key={i} title={item.title} price={item.price} index={i} />
-        ))}
+        {promo.length > 0 ? (
+          promo.map((item, i) => (
+            <Card key={i} title={item.title} price={item.price} index={i} />
+          ))
+        ) : (
+          <p>No promos available.</p>
+        )}
       </AllProduct>
       <HomeProduct
         title="Jelajahi Pesona Jogja"
