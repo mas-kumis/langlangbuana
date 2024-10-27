@@ -8,6 +8,7 @@ interface JogjaData {
   description: string;
   image: string;
 }
+
 export async function GET() {
   try {
     const data = await prisma.jogja.findMany();
