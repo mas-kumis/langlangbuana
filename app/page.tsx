@@ -127,7 +127,6 @@ export default async function Home() {
           <p>No promos available.</p>
         )}
       </HomeProduct>
-      {/* Wisata Nasional */}
       <HomeProduct
         title="Dari Jogja/Magelang ke Seluruh Dunia"
         desc="Temukan Keajaiban bersama LalangBuana"
