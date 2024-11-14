@@ -111,7 +111,7 @@ export default async function Home() {
             <Card key={i} title={item.title} price={item.price} index={i} />
           ))
         ) : (
-          <p>No promos available.</p>
+          <p>No promos.</p>
         )}
       </AllProduct>
       {/* Jogja */}
